@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>Pick one:)</title>
+        <style type="text/css">
+
+.header {
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    background-color: #b4566e;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    z-index: 9999;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.header h1 {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+.header p {
+    font-size: 25px;
+    margin-top: 10px;
+    color: #fff;
+    opacity: 1;
+}
+            #block {
+                margin-top: 3%;
+                margin-left: auto;
+                margin-right: auto;
+                width: 500px;
+                    position: relative;
+    z-index: 9999;
+                height: 500px;
+                border: 4px white dotted;
+                background-color: #ffd0eb;
+            }
+#btn-no {
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    position: relative;
+    padding: 10px 20px;
+    border: 2px solid #f44336;
+    color: #f44336;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #d07c96;
+}
+
+.sparkles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('123.png'); /* Путь к изображению с блестками */
+    background-size: cover;
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 1;
+    animation: sparkles 10s linear infinite;
+    mix-blend-mode: screen;
+}
+
+@keyframes sparkles {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+#btn-no:hover {
+    color: white;
+    background-color: #f44336;
+}
+                
+#btn-yes {
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    padding: 10px 20px;
+    position: relative;
+    border: 2px solid #44944A;
+    color: #44944A;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 100px;
+    margin-left: 100px;
+    cursor: pointer;
+    margin-top: 50%;
+    border-radius: 5px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover; /* Обрезать изображение до соотношения сторон контейнера */
+}
+
+
+#btn-yes:hover {
+    color: white;
+    background-color: #44944A;}
+
+    .notification {
+    display: none;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+}
+        </style>
+    </head>
+    <body>
+        <div class="sparkles"></div>
+        <div class="fireworks"></div>
+        <header class="header"><h1>స్వాగతం, సుస్మిత! This questionnaire was randomly (no) generated for u:) You have to answer one question:</h1>
+        <p>Do you mind going to the beach with Vlad at this weekend? (Food, drinks, happiness included)</p></header>
+        <div id="block">
+            <div style="width: 200px; height: 200px;"><img id=image src="https://i.gifer.com/1PyX.gif">
+            </div>
+        <div class="container">
+            <button id="btn-yes">Definitely!</button>
+            <div id="notification" class="notification">Congratulations, you've just set the meeting with Vlad!</div>
+            <button id="btn-no">Nope...</button>
+        </div>
+            
+        </div>
+        <script type="text/javascript">
+            function random(min,max){
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+            document.querySelector("#btn-no").onclick = function(){
+                this.style.bottom = random(100,300) + "px";
+                this.style.left = random(100,300) + "px";
+                this.style.right = random(100,300) + "px";
+                const minX = Math.max(newX, 0);
+            }
+
+            const image = document.getElementById('image');
+const button = document.getElementById('btn-yes');
+
+button.addEventListener('click', () => {
+    if (image.src.endsWith('https://i.gifer.com/1PyX.gif')) {
+        image.src = 'https://i.gifer.com/av.gif';
+    } else {
+        image.src = 'https://i.gifer.com/1PyX.gif';
+    }
+});
+
+const notifyButton = document.getElementById('btn-yes');
+const notification = document.getElementById('notification');
+
+notifyButton.addEventListener('click', () => {
+    notification.style.display = 'block';
+    setTimeout(() => {
+        notification.style.display = 'none';
+    }, 6000); // Скрыть уведомление через 3 секунды
+});
+        </script>
+    </body>
+</html>
